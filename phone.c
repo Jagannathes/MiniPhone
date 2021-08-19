@@ -4,7 +4,7 @@
 #include "tictac.h"
 #include "calculator.h"
 int main(){
- //disply page code here
+ //display page code here
 
 return 0;
 }
