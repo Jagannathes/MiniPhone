@@ -33,6 +33,10 @@ switch(opt){
     case 1:
     addContacts();
     break;
+
+    case 2:
+    viewContacts();
+    break;
     
 }
 }
@@ -52,4 +56,21 @@ scanf("%lld",&inp.phone_no);
 fwrite (&inp, sizeof(struct Contact), 1, of);
 fclose (of);
 contacts();
+}
+
+void viewContacts(){
+   FILE* of;
+   struct Contact inp;
+   of=fopen("db.txt","r");
+   if(of==NULL){
+      printf("\n Error in opening file");
+   exit(1);
+   }
+   while(fread(&inp,sizeof(inp),1,of)==1){
+      printf("--------------Your Contact Record-----------\n\\n\n");
+      printf("\nName : %c \nNumber : %lld",inp.name,inp.phone_no);
+        getch();
+         }
+         fclose(of);
+         
 }
