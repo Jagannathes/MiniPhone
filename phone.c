@@ -10,7 +10,7 @@ void main(){
   home:
    system("clear"); 
 display();
- //display page code here 
+ 
 printf("\n\n\t\t##  Applications  ## \n\n1. Calculator\n2. Calendar\n3. Contacts\n4. Game\n5. Exit\n");
 printf("Enter the corresponding number:");
 scanf("%d",&n);
